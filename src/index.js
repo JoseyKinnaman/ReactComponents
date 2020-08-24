@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import faker from 'faker';
 
 
 const App = () => {
@@ -8,7 +9,7 @@ const App = () => {
     <div className="ui container comments">
       <div className="comment">
         <a href="/" className="avatar">
-          <img src="" alt="avatar"/>
+          <img src={faker.image.avatar()} alt="avatar"/>
         </a>
         <div className="content">
           <a href="/" className="author">Sam</a>
