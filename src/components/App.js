@@ -1,10 +1,26 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './App.css';
 import './Accordion'
 // import Accordion from './Accordion';
-import Search from './Search';
+// import Search from './Search';
+import Dropdown from './Dropdown'
 
-// const items = [
+  const options = [
+    {
+      label: 'The Color Red',
+      value: 'red'
+    },
+    {
+      label: 'The Color Green',
+      value: 'green'
+    },
+    {
+      label: 'The Color Blue',
+      value: 'blue'
+    }
+  ];
+
+// const items = [ß
 //   {
 //     title: 'What is React?',
 //     content: 'React is a front end Javascript framework'
@@ -20,9 +36,13 @@ import Search from './Search';
 // ]
 
 export default () => {
+  const [selected, setSelected] = useState(options[0])
   return <div>
     <br/>
-   <Search/>
+  <Dropdown
+    selected={selected}
+    onSelectedChange={setSelected}
+    options={options}/>
   </div>
 }
 
