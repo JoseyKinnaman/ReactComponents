@@ -4,6 +4,7 @@ import './Accordion'
 import Accordion from './Accordion';
 import Search from './Search';
 import Dropdown from './Dropdown'
+import Translate from './Translate'
 
   const options = [
     {
@@ -36,20 +37,10 @@ const items = [
 ]
 
 export default () => {
-  const [selected, setSelected] = useState(options[0])
-  return <div>
-    <br/>
-  <Dropdown
-    selected={selected}
-    onSelectedChange={setSelected}
-    options={options}/>
-    <br/>
-    <br/>
-  <Accordion items={items} />
-    <br/>
-  <Search />
-    <br/>
+  return(
+  <div>
+    <Translate />
   </div>
-}
+  )}
 
 
